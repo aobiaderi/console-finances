@@ -93,4 +93,18 @@ var finances = [
 console.log ("Financial Analysis");
 
 console.log ("----------------------------");
+
 // Get total number of months 
+
+console.log ("Total Months: " + finances.length)
+
+
+// console.log(sumWithInitial);
+
+// var initialValue = 0;
+// var sumWithInitial =finances[1].reduce(
+//     (accumulator, currentValue) => accumulator + currentValue,
+//     initialValue
+// );
+// console.log(sumWithInitial);
+// finance
