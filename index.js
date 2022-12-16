@@ -86,3 +86,11 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+
+
+//Output finacial analysis to console
+
+console.log ("Financial Analysis");
+
+console.log ("----------------------------");
+// Get total number of months 
