@@ -191,10 +191,11 @@ const finances1 = [
 ];
   
 // calculate total
-const profitLoss1 = finances1.reduce((a, b) => a.map((c, i) => c + b[i]));
+// const profitLoss1 = finances1.reduce((a, b) => a.map((c, i) => c + b[i]));
   
-console.log("Total: " +"$" + profitLoss1);
+// console.log("Total: " +"$" + profitLoss1);
 
+// calculate total using original array
 
 let profitLoss = 0;
 finances.forEach(item => {
@@ -204,9 +205,11 @@ console.log("Total: " +"$" + profitLoss);
 
 
 // calculate average
-average= Math.floor(profitLoss / finances1.length);
+// average= Math.floor(profitLoss / finances1.length);
 
-console.log("Average Change: " +"$" + average);
+// console.log("Average Change: " +"$" + average);
+
+// calculate average using original array
 
 average= Math.floor(profitLoss / finances.length);
 
@@ -214,14 +217,37 @@ console.log("Average Change: " +"$" + average);
 
 //greatest increase in profit
 
-finances1.sort((a,b) => a - b);
-// console.log(finances1);
-console.log ("Greatest Increase in Profits: " + "Feb-2012 ($" + (finances1[85])+ ")")
+// finances1.sort((a,b) => a - b);
+
+// console.log ("Greatest Increase in Profits: " + "Feb-2012 ($" + (finances1[85])+ ")")
+
+
+// finances.sort(function(a,b) {
+//     return a[1]- b[1]} );
+//     console.log (finances)
+    
+// console.log ("Greatest Increase in Profits: " + (finances[85][0])+" ($" + (finances[85][1])+ ")")
+
+
+//calculate the greatest increase in profit-shorter code using original array
+
+finances.sort((a,b) => a[1] - b[1]);
+
+console.log ("Greatest Increase in Profits: " + (finances[85][0])+" ($" + (finances[85][1])+ ")")
+
+
 
 //greatest decrease in profit
 
-finances1.sort((a,b) => a - b);
-// console.log(finances1);
-console.log ("Greatest decrease in Profits: " + "Sep-2013 ($" + (finances1[0])+ ")")
+// finances1.sort((a,b) => a - b);
+
+// console.log ("Greatest decrease in Profits: " + "Sep-2013 ($" + (finances1[0])+ ")")
+
+//calculate the greatest decrease in profit-shorter code using original array
+
+finances.sort((a,b) => a[1] - b[1]);
+
+
+console.log ("Greatest decrease in Profits: " + (finances[0][0])+" ($" + (finances[0][1])+ ")")
 
 
