@@ -190,14 +190,38 @@ const finances1 = [
 [671099]
 ];
   
+// calculate total
+const profitLoss1 = finances1.reduce((a, b) => a.map((c, i) => c + b[i]));
   
-const profitLoss = finances1.reduce((a, b) => a.map((c, i) => c + b[i]));
-  
-console.log("Total: " +"$" + profitLoss);
+console.log("Total: " +"$" + profitLoss1);
 
+
+let profitLoss = 0;
+finances.forEach(item => {
+    profitLoss += item[1]
+});
+console.log("Total: " +"$" + profitLoss);
 
 
 // calculate average
 average= Math.floor(profitLoss / finances1.length);
 
-console.log("Average: " +"$" + average);
+console.log("Average Change: " +"$" + average);
+
+average= Math.floor(profitLoss / finances.length);
+
+console.log("Average Change: " +"$" + average);
+
+//greatest increase in profit
+
+finances1.sort((a,b) => a - b);
+// console.log(finances1);
+console.log ("Greatest Increase in Profits: " + "Feb-2012 ($" + (finances1[85])+ ")")
+
+//greatest decrease in profit
+
+finances1.sort((a,b) => a - b);
+// console.log(finances1);
+console.log ("Greatest decrease in Profits: " + "Sep-2013 ($" + (finances1[0])+ ")")
+
+
