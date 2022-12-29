@@ -211,9 +211,27 @@ console.log("Total: " +"$" + profitLoss);
 
 // calculate average using original array
 
-average= Math.floor(profitLoss / finances.length);
 
-console.log("Average Change: " +"$" + average);
+// Calculate the average of the changes in Profit/Losses over the entire period
+var totalChange = 0;
+var previousAmount = finances[0][1];
+// console.log("first entry: " + previousAmount);
+for (var i = 1; i < finances.length; i++) {
+  var currentAmount = finances[i][1];
+//   console.log("new entry: " + currentAmount);
+  totalChange += currentAmount - previousAmount;
+//   console.log("combined entry: " + totalChange);
+  previousAmount = currentAmount;
+//   console.log("new previous amount which was the current amt entry: " + previousAmount);
+}
+var averageChange = totalChange / finances.length;
+averageChange = averageChange.toFixed(2);
+console.log("Average Change: " +"$" + averageChange);
+
+
+// average= Math.floor(profitLoss / finances.length);
+
+// console.log("Average Change: " +"$" + average);
 
 //greatest increase in profit
 
