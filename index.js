@@ -224,7 +224,8 @@ for (var i = 1; i < finances.length; i++) {
   previousAmount = currentAmount;
 //   console.log("new previous amount which was the current amt entry: " + previousAmount);
 }
-var averageChange = totalChange / finances.length;
+// Divide by 85 months instead of 86 due to comparison being between 2 months
+var averageChange = totalChange / (finances.length- 1);
 averageChange = averageChange.toFixed(2);
 console.log("Average Change: " +"$" + averageChange);
 
