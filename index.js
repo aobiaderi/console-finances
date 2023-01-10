@@ -224,7 +224,7 @@ for (var i = 1; i < finances.length; i++) {
   previousAmount = currentAmount;
 //   console.log("new previous amount which was the current amt entry: " + previousAmount);
 }
-var averageChange = totalChange / (finances.length);
+var averageChange = totalChange / finances.length;
 averageChange = averageChange.toFixed(2);
 console.log("Average Change: " +"$" + averageChange);
 

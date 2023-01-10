@@ -1,8 +1,9 @@
 # console-finances
 
 ## Description
-This has been created for analyzing the financial records of a company and shows its profit and loss on the console.
-
+This has been created for analyzing the financial records of a company and shows its profit and loss on the console.An array of data was provided which detailed  the profit and losses over a time period ranging from 2010 till 2017.
+Analysis undertaken on the data set include calculating the total number of months used in the dataset and the total profit amount accumulated for the period.
+The average change in profit and losses during this period and the greatest increases and decreases in profit were also calculated.
 ## Screenshot
 The following image shows the application's appearance and functionality:
 
