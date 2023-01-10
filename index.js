@@ -88,114 +88,17 @@ var finances = [
 ];
 
 
-//Output finacial analysis to console
-
+//Output the wordings "finacial analysis" to the console
 console.log ("Financial Analysis");
 
+//Output "----------------------------" to the console
 console.log ("----------------------------");
 
-// Get total number of months 
+// Get total number of months in the finances array
+ numMths= ("Total Months: " + finances.length);
+ console.log (numMths);
 
- nubMths= ("Total Months: " + finances.length);
- console.log (nubMths);
-
-// Add the total profit and loss figures
-
-const finances1 = [
-[867884],
-[984655],
-[322013],
-[-69417],
-[310503],
-[522857],
-[1033096],
-[604885],
-[-216386],
-[477532],
-[893810],
-[-80353],
-[779806],
-[-335203],
-[697845],
-[793163],
-[485070],
-[584122],
-[62729],
-[668179],
-[899906],
-[834719],
-[132003],
-[309978],
-[-755566],
-[1170593],
-[252788],
-[1151518],
-[817256],
-[570757],
-[506702],
-[-1022534],
-[475062],
-[779976],
-[144175],
-[542494],
-[359333],
-[321469],
-[67780],
-[471435],
-[565603],
-[872480],
-[789480],
-[999942],
-[-1196225],
-[268997],
-[-687986],
-[1150461],
-[682458],
-[617856],
-[824098],
-[581943],
-[132864],
-[448062],
-[689161],
-[800701],
-[1166643],
-[947333],
-[578668],
-[988505],
-[1139715],
-[1029471],
-[687533],
-[-524626],
-[158620],
-[87795],
-[423389],
-[840723],
-[568529],
-[332067],
-[989499],
-[778237],
-[650000],
-[-1100387],
-[-174946],
-[757143],
-[445709],
-[712961],
-[-1163797],
-[569899],
-[768450],
-[102685],
-[795914],
-[60988],
-[138230],
-[671099]
-];
-  
-// calculate total
-// const profitLoss1 = finances1.reduce((a, b) => a.map((c, i) => c + b[i]));
-  
-// console.log("Total: " +"$" + profitLoss1);
-
-// calculate total using original array
+// Calculate the total profit and loss figure using forEach to loop over the finances array and log this to the console
 
 let profitLoss = 0;
 finances.forEach(item => {
@@ -204,12 +107,6 @@ finances.forEach(item => {
 console.log("Total: " +"$" + profitLoss);
 
 
-// calculate average
-// average= Math.floor(profitLoss / finances1.length);
-
-// console.log("Average Change: " +"$" + average);
-
-// calculate average using original array
 
 
 // Calculate the average of the changes in Profit/Losses over the entire period
@@ -229,23 +126,6 @@ averageChange = averageChange.toFixed(2);
 console.log("Average Change: " +"$" + averageChange);
 
 
-// average= Math.floor(profitLoss / finances.length);
-
-// console.log("Average Change: " +"$" + average);
-
-//greatest increase in profit
-
-// finances1.sort((a,b) => a - b);
-
-// console.log ("Greatest Increase in Profits: " + "Feb-2012 ($" + (finances1[85])+ ")")
-
-
-// finances.sort(function(a,b) {
-//     return a[1]- b[1]} );
-//     console.log (finances)
-    
-// console.log ("Greatest Increase in Profits: " + (finances[85][0])+" ($" + (finances[85][1])+ ")")
-
 
 //calculate the greatest increase in profit-shorter code using original array
 
@@ -253,13 +133,6 @@ finances.sort((a,b) => a[1] - b[1]);
 
 console.log ("Greatest Increase in Profits: " + (finances[85][0])+" ($" + (finances[85][1])+ ")")
 
-
-
-//greatest decrease in profit
-
-// finances1.sort((a,b) => a - b);
-
-// console.log ("Greatest decrease in Profits: " + "Sep-2013 ($" + (finances1[0])+ ")")
 
 //calculate the greatest decrease in profit-shorter code using original array
 
