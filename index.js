@@ -133,27 +133,19 @@ for (var i = 1; i < finances.length; i++) {
 }
 
 
-// Calculate the average of the changes and then round this to two decimal places
-var average_change = (change_total/(finances.length - 1)).toFixed(2)
+    // Calculate the average of the changes and then round this to two decimal places
+    var average_change = (change_total/(finances.length - 1)).toFixed(2)
 
-// Log the average change to the console
-console.log("Average Change: " +"$" + average_change);
-
-
+    // Log the average change to the console
+    console.log("Average Change: " +"$" + average_change);
 
 
-//calculate the greatest increase in profit-shorter code using original array
+    // Calculate the greatest Increase in Profits 
+    // Use index to get the highest month and change from inside the change array and then log result to the console
+    var greatest_increase_index = change.indexOf(Math.max(...change))
+    greatest_increase = change_with_month[greatest_increase_index]
 
-finances.sort((a,b) => a[1] - b[1]);
-
-console.log ("Greatest Increase in Profits: " + (finances[85][0])+" ($" + (finances[85][1])+ ")")
-
-
-//calculate the greatest decrease in profit-shorter code using original array
-
-finances.sort((a,b) => a[1] - b[1]);
+    console.log ("Greatest increase in Profits: " + greatest_increase [0] +" ($" + (greatest_increase[1]) + ")")
 
 
-console.log ("Greatest decrease in Profits: " + (finances[0][0])+" ($" + (finances[0][1])+ ")")
-
-
+    
