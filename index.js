@@ -132,20 +132,25 @@ for (var i = 1; i < finances.length; i++) {
     change_total += change_per_month
 }
 
+// Calculate the average of the changes and then round this to two decimal places
+var average_change = (change_total/(finances.length - 1)).toFixed(2)
 
-    // Calculate the average of the changes and then round this to two decimal places
-    var average_change = (change_total/(finances.length - 1)).toFixed(2)
-
-    // Log the average change to the console
-    console.log("Average Change: " +"$" + average_change);
-
-
-    // Calculate the greatest Increase in Profits 
-    // Use index to get the highest month and change from inside the change array and then log result to the console
-    var greatest_increase_index = change.indexOf(Math.max(...change))
-    greatest_increase = change_with_month[greatest_increase_index]
-
-    console.log ("Greatest increase in Profits: " + greatest_increase [0] +" ($" + (greatest_increase[1]) + ")")
+// Log the average change to the console
+console.log("Average Change: " +"$" + average_change);
 
 
-    
+// Calculate the greatest Increase in Profits 
+// Use index to get the highest month and change from inside the change array and then log result to the console
+var greatest_increase_index = change.indexOf(Math.max(...change))
+greatest_increase = change_with_month[greatest_increase_index]
+
+console.log ("Greatest increase in Profits: " + greatest_increase [0] +" ($" + (greatest_increase[1]) + ")")
+
+// Calculate the greatest decrease in Profits from the change array
+
+// Use index to get the lowest month and change from inside the change array and then log result to the console
+var greatest_decrease_index = change.indexOf(Math.min(...change))
+greatest_decrease = change_with_month[greatest_decrease_index]
+
+console.log ("Greatest increase in Profits: " + greatest_decrease [0] +" ($" + (greatest_decrease[1]) + ")")
+
