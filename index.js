@@ -95,35 +95,50 @@ console.log ("Financial Analysis");
 console.log ("----------------------------");
 
 // Get total number of months in the finances array
- numMths= ("Total Months: " + finances.length);
- console.log (numMths);
+ num_Mths= ("Total Months: " + finances.length);
+ console.log (num_Mths);
 
 // Calculate the total profit and loss figure using forEach to loop over the finances array and log this to the console
 
-let profitLoss = 0;
+let profit_loss = 0;
 finances.forEach(item => {
-    profitLoss += item[1]
+    profit_loss += item[1]
 });
-console.log("Total: " +"$" + profitLoss);
-
-
+console.log("Total: " +"$" + profit_loss);
 
 
 // Calculate the average of the changes in Profit/Losses over the entire period
-var totalChange = 0;
-var previousAmount = finances[0][1];
-// console.log("first entry: " + previousAmount);
+
+
+// Create variables for storing the different results that will be derived from the for loop below.
+var change = []
+var change_with_month = []
+var change_total = 0
+
+
+// Changes can only be tracked from the second month onwards, so the index in the for loop is set as 1 instead of 0
 for (var i = 1; i < finances.length; i++) {
-  var currentAmount = finances[i][1];
-//   console.log("new entry: " + currentAmount);
-  totalChange += currentAmount - previousAmount;
-//   console.log("combined entry: " + totalChange);
-  previousAmount = currentAmount;
-//   console.log("new previous amount which was the current amt entry: " + previousAmount);
+
+    // Each for loop below will calculate the difference between a month and the previous month's figures
+    var change_per_month = finances[i][1] - finances[i-1][1]
+
+    // Each month's change is appended/pushed into a new array called "change" that has been created empty
+    change.push(change_per_month)
+
+    // Each month's name and change are appended/pushed into the "change_with_month" array that has been created empty
+    change_with_month.push([finances[i][0], change_per_month])
+
+    // Each month's change is added incrementally into change_total to obtain total change
+    change_total += change_per_month
 }
-var averageChange = totalChange / finances.length;
-averageChange = averageChange.toFixed(2);
-console.log("Average Change: " +"$" + averageChange);
+
+
+// Calculate the average of the changes and then round this to two decimal places
+var average_change = (change_total/(finances.length - 1)).toFixed(2)
+
+// Log the average change to the console
+console.log("Average Change: " +"$" + average_change);
+
 
 
 
